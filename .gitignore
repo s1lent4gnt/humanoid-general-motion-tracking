@@ -1,0 +1,6 @@
+**/__pycache__/
+**/*.pyc
+**/*.egg-info/
+.vscode/
+**/MUJOCO_LOG.TXT
+**/.DS_Store
