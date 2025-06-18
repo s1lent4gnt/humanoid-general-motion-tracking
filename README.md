@@ -24,7 +24,7 @@
 </p>
 
 <p align="center">
-<h3 align="center"><a href="https://gmt-humanoid.github.io">Website</a> | <a href="https://arxiv.org">arXiv</a> | <a href="https://youtu.be/n6p0DzpYjDE?si=6oIIx_Er36Ch7XWY">Video</a> </h3>
+<h3 align="center"><a href="https://gmt-humanoid.github.io">Website</a> | <a href="https://arxiv.org/abs/2506.14770">arXiv</a> | <a href="https://youtu.be/n6p0DzpYjDE?si=6oIIx_Er36Ch7XWY">Video</a> </h3>
 <div align="center"></div>
 </p>
 
@@ -67,7 +67,7 @@ If you find this codebase useful, please consider citing our work:
 @article{chen2025gmt,
 title={GMT: General Motion Tracking for Humanoid Whole-Body Control},
 author={Chen, Zixuan and Ji, Mazeyu and Cheng, Xuxin and Peng, Xuanbin and Peng, Xue Bin and Wang, Xiaolong},
-journal={arXiv:2506.xxxx},
+journal={arXiv:2506.14770},
 year={2025}
 }
 ```
