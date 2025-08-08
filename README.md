@@ -57,6 +57,9 @@ python view_motion.py --motion walk_stand.pkl
 ## ‼️Alert & Disclaimer
 Although the pretrained policy has been successfully tested on our machine, the performance of the policy might vary on different robots. We cannot guarantee the success of deployment on every machine. The model we provide is for research use only, and we disclaim all responsibility for any harm, loss, or malfunction arising from its deployment.
 
+## News
+- [ ] Data processing and retargeter code will be released soon.
+
 ## Acknowledgements
 + The Mujoco simulation script is originally adapted from [LCP](https://github.com/zixuan417/smooth-humanoid-locomotion).
 + For human motion part, we mainly refer to [ASE](https://github.com/nv-tlabs/ASE) and [PHC](https://github.com/ZhengyiLuo/PHC).
