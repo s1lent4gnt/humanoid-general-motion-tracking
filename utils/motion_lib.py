@@ -130,9 +130,35 @@ class MotionLib:
         return torch.sum(self._motion_lengths).item()
                 
     def _fetch_motion_files(self, motion_file: str):
-        motion_files = [motion_file]
-        motion_weights = [1.0]
-        
+        motion_files, motion_weights = [], []
+
+        def add_file(path: str):
+            if os.path.isfile(path):
+                motion_files.append(path)
+                motion_weights.append(1.0)
+
+        # 1) Comma-separated list: "assets/motions/walk.pkl,assets/motions/run.pkl"
+        if "," in motion_file:
+            for f in [s.strip() for s in motion_file.split(",") if s.strip()]:
+                add_file(f)
+
+        # 2) Directory: include all .pkl (case-insensitive)
+        elif os.path.isdir(motion_file):
+            for f in sorted(os.listdir(motion_file)):
+                if f.lower().endswith(".pkl"):
+                    add_file(os.path.join(motion_file, f))
+
+        # 3) Single file
+        else:
+            add_file(motion_file)
+
+        # Safety: empty selection → clear error early (prevents div-by-zero later)
+        if not motion_files:
+            raise FileNotFoundError(
+                f"No motion files found from '{motion_file}'. "
+                "Pass a valid .pkl file, a comma-separated list, or a directory with .pkl files."
+            )
+
         return motion_files, motion_weights
     
     def _calc_frame_blend(self, motion_ids, times):
