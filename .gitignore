@@ -4,3 +4,6 @@
 .vscode/
 **/MUJOCO_LOG.TXT
 **/.DS_Store
+.venv/
+.venv3.9/
+.python-version
